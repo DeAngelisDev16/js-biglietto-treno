@@ -23,21 +23,17 @@ const firstDiscount = ticketPrice - (ticketPrice * 20 / 100);
 
 const secondDiscount = ticketPrice - (ticketPrice * 40 / 100);
 
-
-/* Calcolo prezzo biglietto per utente maggiorenne, con età inferiore a 65. */
-if ((secondQuestion >=18) && (secondQuestion <=64)) {
-   document.getElementById('output').innerHTML = ticketPrice + 'euro' ;
-}
-
-/* Calcolo prezzo biglietto minorenne */
+ /* Calcolo prezzo biglietto  */
 if (secondQuestion <= 17) {
-   document.getElementById('output').innerHTML = firstDiscount.toFixed(2) + 'euro ;'
+   document.getElementById('output').innerHTML = firstDiscount.toFixed(2) + ' euro';
+} else if (secondQuestion >=65) {
+   document.getElementById('output').innerHTML = secondDiscount.toFixed(2) + ' euro';
+
+} else {
+   document.getElementById('output').innerHTML = ticketPrice.toFixed(2) + ' euro';
+
 }
 
-/* Calcolo prezzo biglietto over 65 */
-if (secondQuestion >= 65) {
-   document.getElementById('output').innerHTML = secondDiscount.toFixed(2) + 'euro ;'
-}
 
 
 
