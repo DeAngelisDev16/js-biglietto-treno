@@ -14,5 +14,15 @@ L'output del prezzo finale va emesso (presentato all'utente) in forma umana (con
 const firstQuestion = parseInt(prompt('Quanti km vuoi percorrere?'));
 console.log(firstQuestion);
 
-const secondQuestion = parseInt(prompt('Quanti anni hai?'));;
+const secondQuestion = parseInt(prompt('Quanti anni hai?'));
 console.log(secondQuestion);
+
+let ticketPrice = firstQuestion * 0.21 ;
+
+/* Calcolo prezzo biglietto per utente maggiorenne, con età inferiore a 65. */
+if (secondQuestion >=18) && (secondQuestion <=64) {
+   document.getElementById('output').innerHTML = ticketPrice ;
+}
+
+
+
